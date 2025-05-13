@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 
 import java.util.List;
 
-public class ConsultaMain {
+public class ConsultaClienteMain {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new SpringApplicationBuilder(JpaProjetcApplication.class)

@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,4 +19,21 @@ public class ClienteJpa {
         TypedQuery<Cliente> query = entityManager.createQuery("from Cliente", Cliente.class);
         return query.getResultList();
     }
+
+    @Transactional
+    public Cliente salvar(Cliente cliente){
+        return entityManager.merge(cliente);
+    }
+
+    @Transactional
+    public void remover(Long id){
+        Cliente cliente = buscarId(id);
+        entityManager.remove(cliente);
+    }
+
+    public Cliente buscarId(Long id){
+        return entityManager.find(Cliente.class, id);
+    }
+
+
 }
