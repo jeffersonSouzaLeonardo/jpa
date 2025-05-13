@@ -1,0 +1,2 @@
+INSERT into cliente(id, nome)VALUES(1, "JOAO"),(2, "MARIA"),(3, "JOSE"),(4, "CARDOSO"),(5, "FERNANDO"),(6, "MAYCON"),(7, "KLEITON"),(8, "GUILHERME"),(9, "CINTIA"),(10, "CARLA");
+INSERT into produto(id, descricao)VALUES(1, "ALICATE"),(2, "CHAVE DE FENDA"),(3, "CHAVE DE BOCA"),(4, "MARTELO"),(5, "SOLDADORA"),(6, "SPOTER"),(7, "FURADEIRA"),(8, "PARAFUSADEIRA"),(9, "LIXA");
